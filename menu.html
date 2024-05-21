@@ -1,0 +1,479 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/menu.css">
+    <!-- шрифты -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rasputin&display=swap">
+</head>
+<body>
+    <!-- Хедер -->
+    <div class="header">
+        
+        <div id="menu">
+            <img src="IMG/logo.png" alt="">
+            <!-- основной navbar -->
+            <ul>
+                <li>
+                    <div class="line-container clicked">
+                        <p class="menu-text"><a class="menu-text-a" href="main.html">HOME</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line-container">
+                        <p class="menu-text"><a class="menu-text-a" href="menu.html">MENU</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line-container">
+                        <p class="menu-text"><a class="menu-text-a" href="information.html">INFORMATION</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line-container">
+                        <p class="menu-text"><a class="menu-text-a" href="PHP/reg-auth.php">REGISTRATION</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line-container">
+                        <p class="menu-text"><a class="menu-text-a" href="pa.html">PERSONAL ACCOUNT</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+        <!-- второй navbar -->
+        <nav id="nav" class="hidden-navbar">
+            <div class="navbar-container">
+                <ul>
+                    <li>
+                        <div class="line-container clicked">
+                            <p class="menu-text"><a class="menu-text-a" href="main.html">HOME</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="line-container">
+                            <p class="menu-text"><a class="menu-text-a" href="menu.html">MENU</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="line-container">
+                            <p class="menu-text"><a class="menu-text-a" href="information.html">INFORMATION</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="line-container">
+                            <p class="menu-text"><a class="menu-text-a" href="sales.html">SALES</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="line-container">
+                            <p class="menu-text"><a class="menu-text-a" href="sales.html">PERSONAL ACCOUNT</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Фоновая картинка -->
+    <div class="background-image">
+        <h3>Menu</h3>
+    </div>
+    <!-- Блюда -->
+    <div class="dishes">
+
+        <!-- Рамен -->
+
+        <h2><a name="Ramen">Рамен</a></h2>
+        <div class="Ramen">
+            <div class="shell">
+                <!-- левая колонна -->
+                <div class="left-bar">
+                    <div class="card" data-link="modal1">
+                        <img src="IMG/category-1.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                    <div class="card" data-link="modal2">
+                        <img src="IMG/category-1.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                    <div class="card" data-link="modal3">
+                        <img src="IMG/category-1.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                    <div class="card" data-link="modal4">
+                        <img src="IMG/category-1.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                </div>
+
+                <!-- Модальные окна для левой колонны -->
+
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal1">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-1.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal2">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-1.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <div id="modal3" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal3">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-1.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <div id="modal4" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal4">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-1.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <!-- правая колонна -->
+                <div class="right-bar">
+                    <div class="card" data-link="modal5">
+                        <img src="IMG/category-1.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                    <div class="card" data-link="modal6">
+                        <img src="IMG/category-1.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                    <div class="card" data-link="modal7">
+                        <img src="IMG/category-1.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                    <div class="card" data-link="modal8">
+                        <img src="IMG/category-1.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                </div>
+
+                <!-- Модальные окна для правой колонны -->
+
+                <div id="modal5" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal5">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-1.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <div id="modal6" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal6">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-1.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <div id="modal7" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal7">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-1.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <div id="modal8" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal8">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-1.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Роллы -->
+
+        <h2><a name="Rolls">Роллы</a></h2>
+        <div class="Rolls">
+            <div class="shell">
+                <!-- левая колонна -->
+                <div class="left-bar">
+                    <div class="card" data-link="modal9">
+                        <img src="IMG/category-2.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                    <div class="card" data-link="modal10">
+                        <img src="IMG/category-2.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                    <div class="card" data-link="modal11">
+                        <img src="IMG/category-2.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                    <div class="card" data-link="modal12">
+                        <img src="IMG/category-2.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                </div>
+
+                <!-- Модальные окна для левой колонны -->
+
+                <div id="modal9" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal9">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-2.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <div id="modal10" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal10">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-2.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <div id="modal11" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal11">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-2.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <div id="modal12" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal12">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-2.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <!-- правая колонна -->
+                <div class="right-bar">
+                    <div class="card" data-link="modal13">
+                        <img src="IMG/category-2.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                    <div class="card" data-link="modal14">
+                        <img src="IMG/category-2.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                    <div class="card" data-link="modal15">
+                        <img src="IMG/category-2.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                    <div class="card" data-link="modal16">
+                        <img src="IMG/category-2.png" alt="">
+                        <div class="text-dishes">
+                            <p class="name">Классический</p>
+                            <hr class="card-line">
+                            <p class="constituent">Соевый соус, мирин, лапша, говядина, лук, чеснок, морковь, шпинат</p>
+                        </div>
+                        <p class="price">40$</p>
+                    </div>
+                </div>
+
+                <!-- Модальные окна для правой колонны -->
+
+                <div id="modal13" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal13">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-2.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <div id="modal14" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal14">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-2.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <div id="modal15" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal15">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-2.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+                <div id="modal16" class="modal">
+                    <div class="modal-content">
+                        <span class="close" data-link="modal16">&times;</span>
+                        <p><i>Классический Рамен</i></p>
+                        <div class="text">
+                            <img src="IMG/category-2.png" alt="">
+                            <p class="description">Насладитесь традиционным вкусом Японии с нашим классическим раменом. Восхитительный ароматный бульон, приготовленный на основе долгого кипячения свиных костей, курицы и специальных приправ, создаёт богатый и глубокий вкус. В него добавлены идеально сваренные яичные лапши, которые остаются упругими и нежными.</p>
+                        </div>
+                        <button class="button"><a href="">В корзину</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="JS/menu.js"></script>
+</body>
+</html>

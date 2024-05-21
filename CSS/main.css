@@ -1,0 +1,602 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.header{
+    width: 100%;
+    height: 15vh;
+    padding: 0 300px;
+    position: fixed;
+    z-index: 9999;
+}
+
+#menu>img{
+    height: 145px;
+    width: 180px;
+    margin: 0 580px;
+}
+
+#menu>ul{
+    display: flex;
+    list-style: none;
+    margin: 0 100px;
+}
+
+#menu>ul>li{
+    color: white;
+    margin: 0 50px;
+    font-size: 16px;
+    
+}
+
+#menu a:hover {
+    color: rgb(255, 0, 0); /* Изменение цвета текста при наведении */
+}
+
+.menu-text{
+    margin-bottom: 10px;
+}
+
+.menu-text a {
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* Плавное изменение цвета текста */
+}
+
+.menu-text-a.clicked {
+    color: red; /* Цвет текста становится красным при нажатии */
+}
+
+.line-container{
+    position: relative;
+    display: inline-block;
+}
+
+.line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Изначально ширина равна 0 */
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s; /* Плавное появление красной полоски */
+}
+
+.line-container:hover .line {
+    width: 100%; /* Увеличение ширины до 100% при наведении на контейнер */
+}
+
+.line-container.clicked .line {
+    width: 100%; /* Показываем красную линию при нажатии на контейнер */
+}
+
+/* второй navbar */
+
+#nav{
+    height: 40px;
+    width: 150%;
+    background-color: #f5f5e3;;
+    margin: -175px  -300px;
+}
+
+#nav a {
+    color: black;
+    transition: color 0.3s; /* Плавное изменение цвета текста */
+}
+
+#nav ul{
+    display: flex;
+    list-style: none;
+}
+
+#nav li {
+    margin: 12px 5%;
+}
+#nav a:hover {
+    color: rgb(255, 0, 0); /* Изменение цвета текста при наведении */
+}
+
+.navbar-container{
+    width: 50%;
+    margin: auto;
+}
+
+/* Стили для скрытого второго навигационного бара */
+
+.hidden-navbar {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+/* Стили для показанного второго навигационного бара */
+
+#nav.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear;
+}
+
+
+/* Слайдер */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Начальная прозрачность */
+    }
+    to {
+        opacity: 1; /* Конечная прозрачность */
+    }
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 105vh;
+}
+
+.slider-container .text {
+    animation: fadeIn 4s ease forwards; /* Применяем анимацию */
+}
+
+.slider {
+    display: flex;
+}
+  
+.slide {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease; /* Добавляем плавную анимацию переключения */
+}
+  
+.Slide-1{
+    top: 50%;
+    left: 70%;
+}
+
+.Slide-2{
+    height: 100vh;
+    top: 80%;
+    left: 30%;
+}
+
+.Slide-3{
+    top: 50%;
+    left: 60%;
+}
+
+.slide>img {
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    position: absolute;
+    transform: translate(-50%, -50%); /* Центрирование надписи по центру слайдера */
+    color: #fff; /* Цвет текста */
+    font-family: 'Protest Revolution', serif; /* семейство шрифта */
+    font-size: 24px; /* Размер шрифта */
+    font-style: italic; /* Курсивный шрифт */
+    text-align: center; /* Выравнивание текста по центру */
+} 
+
+.text {
+    opacity: 0; /* Начальная прозрачность текста */
+    transition: opacity 4s ease; /* Плавное появление текста */
+    font-size: 4em;
+}
+
+.container:hover .text {
+    opacity: 1; /* Появление текста при наведении на контейнер */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 3em;
+    color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+  
+.prev {
+    left: 10px;
+}
+  
+.next {
+    right: 10px;
+}
+
+/* Базовая информация */
+
+.base-information {
+    height: 80vh; /* Для примера, чтобы было что прокручивать */
+}
+
+@keyframes fadeIn-2 {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container-bi {
+    width: 70%;
+    margin: auto;
+    opacity: 0;
+    animation: fadeIn-2 3s forwards; /* Анимация появления */
+    animation-delay: 2s;
+}
+
+.element{
+    display: flex;
+}
+
+.element img{
+    position: absolute;
+    right: 0;
+    top: 10;
+}
+
+.element p {
+    font-size: 2em;
+    font-family: 'Protest Strike', sans-serif;
+    position: absolute;
+    top: 150;
+    text-align: center;
+}
+
+.red-text{
+    color:red;
+}
+
+.PS{
+    font-size: 1em;
+    position: absolute;
+    top: 230;
+    left: 60;
+    text-align: center;
+}
+
+.bi-button{
+    background-color: red;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 300;
+    left: 150;
+    width: 200px;
+    height: 50px;
+}
+
+.bi-button a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    font-family: 'Protest Strike', sans-serif;
+}
+
+.phone{
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    top: 600;
+    border: 1px gray solid;
+    background-image: url(../IMG/bg.png);
+    background-size: cover;
+}
+
+.phone img, .special img{
+    left: 50;
+    top: 25;
+    height: 50px;
+    width: 50px;
+}
+
+.phone p, .special p {
+    font-size: 1em;
+    top: 30;
+    left: 120;
+    font-family: 'Protest Strike', sans-serif;
+}
+
+#time{
+    right: 20;
+    text-align: right;
+    font-size: 2em;
+}
+
+.special{
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    top: 600;
+    left: 700;
+    border: 1px gray solid;
+    background-image: url(../IMG/bg.png);
+    background-size: cover;
+}
+/*Популярное */
+
+.popular{
+    height: 100vh;
+    width: 100%;
+}
+
+.popular h3{
+    text-align: center;
+    margin: 40px 0;
+    font-size: 2em;
+    font-family: 'Protest Strike', sans-serif;
+    font-style: unset;
+}
+
+.pop-rolls{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    padding: 100px;
+    display: flex;
+}
+
+.pop-rolls.visible {
+    opacity: 1; /* Значение непрозрачности при появлении */
+}
+
+.left, .right{
+    width: 50%;
+    height: 100%;
+}
+
+.card{
+    width: 100%;
+    height: 25%;
+    padding: 50px;
+    display: flex;
+}
+
+.pop-rolls .left .card,
+.pop-rolls .right .card {
+  opacity: 0;
+  transform: translateX(-20px); /* Смещение влево для левого блока и вправо для правого блока */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.pop-rolls .left .card.visible,
+.pop-rolls .right .card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.card img{
+    width: 90px !important;
+    height: 90px !important;
+    margin-right: 10px;
+}
+
+.pop-text {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.pop-text p{
+    margin: 3px 0;
+    color: grey;
+}
+
+.card hr{
+    width: 100%;
+    height: 1px;
+}
+
+.name{
+    font-family: 'Protest Strike', sans-serif;
+    color: black !important;
+}
+
+.price{
+    color: red;
+    margin: 8px;
+    font-size: 1.4em;
+}
+
+/* Акции */
+
+.promo{
+    height: 30vh;
+    width: 100%;
+    background-image: url(../IMG/promo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Protest Strike', serif;
+    padding: 100px;
+}
+
+.promo p{
+    margin-left: 620px;
+    font-size: 2em;
+}
+
+/* Основные категории */
+
+.base-categories{
+    height: 100vh;
+    width: 100%;
+    padding-top: 80px;
+}
+
+.base-categories h3{
+    text-align: center;
+    font-family: 'Rasputin', sans-serif;
+    font-size: 2em;
+    margin-bottom: 70px;
+}
+
+.top, .bottom{
+    display: flex;
+    width: 60%;
+    height: 50%;
+    margin: auto;
+}
+
+.categories{
+    flex: 1;
+    padding: 30px;
+    margin: 10px; /* Пространство между блоками */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.categories:hover {
+    transform: scale(1.1); /* Увеличение размера при наведении */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Добавление тени (обводки) при наведении */
+}
+
+.categories img{
+    height: 200px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.categories p{
+    font-family: 'Protest Revolution', serif;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Акционные сеты */
+
+.promo-sets{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../IMG/bg-2.png);
+    background-repeat: no-repeat;
+}
+
+.promo-sets-text{
+    text-align: center;
+    margin-top: 230px;
+    font-size: 2em;
+    font-family: 'Protest Strike', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    display: flex;
+    font-size: 0.6em;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.title li {
+    margin: 15px 8px;
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+.title li.active {
+    color: red; 
+}
+
+.sets{
+    width: 70%;
+    height: 90%;
+    margin: auto;
+    padding-top: 60px;
+    display: flex;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sets.hide {
+    opacity: 0; 
+    pointer-events: none;
+}
+
+.sets img{
+    width: 700px;
+    height: 500px;
+}
+
+.promo-sets-info{
+    width: 40%;
+    height: 50%;
+}
+
+.pro {
+    padding: 0;
+    margin: 30px 0;
+    height: 85px;
+}
+
+.pro img{
+    width: 70px !important;
+    height: 70px !important;
+    margin: 10px;
+}
+
+/* Номер доставки */
+
+.footer{
+    height: 200px;
+    width: 1100px;
+    margin: auto;
+    background-image: url(../IMG/bg-3.png);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.footer img{
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.footer p {
+    color: #f8dcba;
+    position: absolute;
+    font-size: 1.3em;
+}
+
+.number-icon{
+    top: 30;
+    left: 75;
+    width: 70px;
+    height: 70px;
+}
+
+.email-icon{
+    top: 110;
+    left: 75;
+    width: 70px;
+    height: 70px;
+}
+
+.number{
+    top: 50;
+    left: 160;
+}
+
+.email-email{
+    top: 130;
+    left: 160;
+}
+

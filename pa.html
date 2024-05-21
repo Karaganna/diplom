@@ -1,0 +1,162 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/personal-account.css">
+    <!-- шрифты -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rasputin&display=swap">
+</head>
+<body>
+    <!-- Хедер -->
+    <div class="header">
+        
+        <div id="menu">
+            <img src="IMG/logo.png" alt="">
+            <!-- основной navbar -->
+            <ul>
+                <li>
+                    <div class="line-container clicked">
+                        <p class="menu-text"><a class="menu-text-a" href="main.html">HOME</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line-container">
+                        <p class="menu-text"><a class="menu-text-a" href="menu.html">MENU</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line-container">
+                        <p class="menu-text"><a class="menu-text-a" href="information.html">INFORMATION</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line-container">
+                        <p class="menu-text"><a class="menu-text-a" href="PHP/reg-auth.php">REGISTRATION</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line-container">
+                        <p class="menu-text"><a class="menu-text-a" href="pa.html">PERSONAL ACCOUNT</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+        <!-- второй navbar -->
+        <nav id="nav" class="hidden-navbar">
+            <div class="navbar-container">
+                <ul>
+                    <li>
+                        <div class="line-container clicked">
+                            <p class="menu-text"><a class="menu-text-a" href="main.html">HOME</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="line-container">
+                            <p class="menu-text"><a class="menu-text-a" href="menu.html">MENU</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="line-container">
+                            <p class="menu-text"><a class="menu-text-a" href="information.html">INFORMATION</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="line-container">
+                            <p class="menu-text"><a class="menu-text-a" href="sales.html">SALES</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="line-container">
+                            <p class="menu-text"><a class="menu-text-a" href="sales.html">PERSONAL ACCOUNT</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Фоновая картинка -->
+    <div class="background-image">
+        <h3>Добро пожаловать в личный кабинет </h3>
+    </div>
+    
+
+    <div class="container">
+        <div class="tabs">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+          <button type="button" class="toggle-btn" onclick="registration()">Register</button>
+        </div>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+    
+        <form action="auth.php" method="post" id="login" class="form">
+          <input type="text" class="input-filed" placeholder="User Id required" name="login">
+          <input type="text" class="input-filed" placeholder="Password" name="pass">
+          <input type="checkbox" class="check-box"><span>Remember Password</span>
+          <button type="submit" class="submit-btn">Log in</button>
+        </form>
+    
+        <form action="reg.php" method="post" id="register" class="form">
+          <input type="text" class="input-filed" placeholder="User Id" name="login">
+          <input type="email" class="input-filed" placeholder="Email Id" name="email">
+          <input type="text" class="input-filed" placeholder="Password" name="pass"> 
+          <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+          <button type="submit" class="submit-btn">Register</button>
+        </form>
+      </div>
+    
+      <script>
+        var logIn = document.getElementById("login");
+        var register = document.getElementById("register");
+        var button = document.getElementById("btn");
+    
+        function registration() {
+          logIn.style.left = "-400px";
+          register.style.left = "50px";
+          button.style.left = "110px";
+        }
+    
+        function login() {
+          logIn.style.left = "50px";
+          register.style.left = "450px";
+          button.style.left = "0";
+        }
+      </script>
+
+    <!-- <form method="post" action="account.php">
+        <label>Телефон:</label>
+        <input type="text" name="phone" value="">
+        <br>
+        <label>Адрес:</label>
+        <input type="text" name="address" value="">
+        <br>
+        <label>Страна:</label>
+        <input type="text" name="country" value="">
+        <br>
+        <label>Возраст:</label>
+        <input type="number" name="age" value="">
+        <br>
+        <button type="submit">Обновить данные</button>
+    </form> -->
+
+    <script src="JS/menu.js"></script>
+</body>
+</html>

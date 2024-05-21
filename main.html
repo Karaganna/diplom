@@ -1,0 +1,419 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <!-- шрифты -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rasputin&display=swap">
+</head>
+<body>
+    <!-- Хедер -->
+    <div class="header">
+        
+        <div id="menu">
+            <img src="IMG/logo.png" alt="">
+            <!-- основной navbar -->
+            <ul>
+                <li>
+                    <div class="line-container clicked">
+                        <p class="menu-text"><a class="menu-text-a" href="main.html">HOME</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line-container">
+                        <p class="menu-text"><a class="menu-text-a" href="menu.html">MENU</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line-container">
+                        <p class="menu-text"><a class="menu-text-a" href="information.html">INFORMATION</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line-container">
+                        <p class="menu-text"><a class="menu-text-a" href="PHP/reg-auth.php">REGISTRATION</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line-container">
+                        <p class="menu-text"><a class="menu-text-a" href="pa.html">PERSONAL ACCOUNT</a></p>
+                        <div class="line"></div>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+        <!-- второй navbar -->
+        <nav id="nav" class="hidden-navbar">
+            <div class="navbar-container">
+                <ul>
+                    <li>
+                        <div class="line-container clicked">
+                            <p class="menu-text"><a class="menu-text-a" href="main.html">HOME</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="line-container">
+                            <p class="menu-text"><a class="menu-text-a" href="menu.html">MENU</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="line-container">
+                            <p class="menu-text"><a class="menu-text-a" href="information.html">INFORMATION</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="line-container">
+                            <p class="menu-text"><a class="menu-text-a" href="sales.html">SALES</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="line-container">
+                            <p class="menu-text"><a class="menu-text-a" href="sales.html">PERSONAL ACCOUNT</a></p>
+                            <div class="line"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- слайдер -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="IMG/Slide-1.jpg" alt="Slide 1">
+                <div class="container Slide-1" onmousemove="moveText(event)">
+                    <p class="text">KEEP CALM & </br> EAT SUSHI</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="IMG/Slide-2.jpg" alt="Slide 2" class="Slide-2">
+                <div class="container Slide-2" onmousemove="moveText(event)">
+                    <p class="text">TRADITIONAL RECIPES <br>FROM JAPAN</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="IMG/Slide-3.jpg" alt="Slide 3">
+                <div class="container Slide-3" onmousemove="moveText(event)">
+                    <p class="text">NEW ORDER & </br> TAKE AWAY SETS</p>
+                </div>
+            </div>
+        </div>
+    <!-- стрелки для слайдов -->
+        <svg class="prev" onclick="prevSlide()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+            <path fill="#ffffff" d="M3.3 12l6.7 6.7c.4.4 1 .4 1.4 0s.4-1 0-1.4L5.4 12l5.7-5.7c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0L3.3 11.3c-.4.4-.4 1 0 1.4z"/>
+        </svg>
+    
+        <svg class="next" onclick="nextSlide()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+            <path fill="#ffffff" d="M20.7 12l-6.7-6.7c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4L18.6 12l-5.7 5.7c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3l6.7-6.7c.4-.4.4-1 0-1.4z"/>
+        </svg>
+    </div> 
+    <!-- базовая информация -->
+    <div class="base-information">
+    <div class="container-bi">
+        <div class="element">
+            <p>Закажи еды <span class="red-text">более чем 100$</span> и получи <br> бонусный сет в подарок</p>
+            <span class="PS">Данная акция не распростараняется на жителей планеты Земля</span>
+            <img src="IMG/finger-up.png" alt="">
+            <button class="bi-button"><a href="#">INFORMATION</a></button>
+
+            <div class="phone">
+                <img src="IMG/mobile.png" alt="">
+                <p>Тех поддержка работает <br> круглосуточно</p>
+                <p id="time">24/7</p>
+            </div>
+            <div class="special">
+                <img src="IMG/birthday-cake.png" alt="">
+                <p>Скидка именинникам влоть до <br> половины от суммы заказа</p>
+                <p id="time">50%</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Популярное -->
+    <div class="popular">
+        <h3>Популярные позиции</h3>
+        <div class="pop-rolls">
+            <div class="left">
+                <div class="card">
+                    <img src="IMG/popular-1.png" alt="">
+                    <div class="pop-text">
+                        <p class="name">Сяке маки</p>
+                        <hr>
+                        <p>Очаровательный ролл с свежим лососем, авокадо и огурцом, завернутый в нори и рис, классический вариант для ценителей лосося.</p>
+                    </div>
+                    <p class="price">16$</p>
+                </div>
+                <div class="card">
+                    <img src="IMG/popular-2.png" alt="">
+                    <div class="pop-text">
+                        <p class="name">Калифорния</p>
+                        <hr>
+                        <p>Легкий и освежающий ролл с крабовым мясом, авокадо и огурцом, покрытый кунжутом для неповторимого вкуса.</p>
+                    </div>
+                    <p class="price">16$</p>
+                </div>
+                <div class="card">
+                    <img src="IMG/popular-3.png" alt="">
+                    <div class="pop-text">
+                        <p class="name">Филадельфия</p>
+                        <hr>
+                        <p>Классический ролл с крем-сыром, лососем и огурцом, завернутый в нори и рис, идеальное сочетание нежности и свежести.</p>
+                    </div>
+                    <p class="price">16$</p>
+                </div>
+                <div class="card">
+                    <img src="IMG/popular-4.png" alt="">
+                    <div class="pop-text">
+                        <p class="name">Темпура</p>
+                        <hr>
+                        <p>Идеальное сочетание хрустящей темпурной крошки с креветкой или овощами, обернутых в нори и рис.</p>
+                    </div>
+                    <p class="price">16$</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="card">
+                    <img src="IMG/popular-5.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Якудза</p>
+                            <hr>
+                            <p>Экзотический ролл с утиной грудкой, авокадо и огурцом, приправленный соевым соусом и васаби для неповторимого вкуса.</p>
+                        </div>
+                    <p class="price">16$</p>
+                </div>
+                <div class="card">
+                    <img src="IMG/popular-6.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Унаги</p>
+                            <hr>
+                            <p>Аппетитный ролл с унаги (угрем), авокадо и огурцом, приправленный соевым соусом и васаби для классического японского вкуса.</p>
+                        </div>
+                    <p class="price">16$</p>
+                </div>
+                <div class="card">
+                    <img src="IMG/popular-7.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Тамаго</p>
+                            <hr>
+                            <p>Нежный ролл с японским омлетом, огурцом и авокадо, обернутый в нори и рис, идеальный выбор для любителей традиционной японской кухни.</p>
+                        </div>
+                    <p class="price">16$</p>
+                </div>
+                <div class="card">
+                    <img src="IMG/popular-8.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Кунсей</p>
+                            <hr>
+                            <p>Превосходный ролл с креветкой, авокадо и огурцом, завернутый в нори и рис, с добавлением соевого соуса и васаби для насыщенного вкуса.</p>
+                        </div>
+                    <p class="price">16$</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Акции -->
+    <div class="promo">
+        <p>Скидка призакаже двух видов суши</p>
+    </div>
+    <!-- Основные категории -->
+    <div class="base-categories">
+        <h3>Основные категории</h3>
+        <div class="top">
+            <div class="categories" data-link="menu.html#Ramen">
+                <img src="IMG/category-1.png" alt="">
+                <p>Ramen</p>
+            </div>
+            <div class="categories" data-link="menu.html#Rolls">
+                <img src="IMG/Category-2.png" alt="">
+                <p>Rolls</p>
+            </div>
+            <div class="categories">
+                <img src="IMG/category-3.png" alt="">
+                <p>Hot Rolls</p></div>
+            <div class="categories">
+                <img src="IMG/category-4.png" alt="">
+                <p>Salads</p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="categories">
+                <img src="IMG/category-5.png" alt="">
+                <p>Sashimi</p>
+            </div>
+            <div class="categories">
+                <img src="IMG/Category-6.png" alt="">
+                <p>Bevarages</p>
+            </div>
+            <div class="categories">
+                <img src="IMG/category-7.png" alt="">
+                <p>Alco Drinks</p></div>
+            <div class="categories">
+                <img src="IMG/category-8.png" alt="">
+                <p>Sweet Rolls</p>
+            </div>
+        </div>
+    </div>
+    <!-- Акционные сеты -->
+    <div class="promo-sets">
+        <div class="promo-sets-text">
+            <p>
+                Наши лучшие сеты
+            </p>
+            <ul class="title">
+                <li id="premium">Premium Set</li>
+                <li id="sake">Set Sake Norimaki</li>
+                <li id="rolls">Set Rolls</li>
+            </ul>
+        </div>
+        <div class='sets' id="setsContainer">
+            <!-- Содержимое первого сета будет отображаться здесь -->
+            <div id="premiumContent">
+                <img src="IMG/promo-sets-1.png" alt="">
+                <div class="promo-sets-info">
+                    <div class="card pro">
+                        <img src="IMG/popular-2.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Калифорния</p>
+                            <hr>
+                            <p>Легкий и освежающий ролл с крабовым мясом, авокадо и огурцом, покрытый кунжутом для неповторимого вкуса.</p>
+                        </div>
+                        <p class="price">16$</p>
+                    </div>
+                    <div class="card pro">
+                        <img src="IMG/popular-2.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Калифорния</p>
+                            <hr>
+                            <p>Легкий и освежающий ролл с крабовым мясом, авокадо и огурцом, покрытый кунжутом для неповторимого вкуса.</p>
+                        </div>
+                        <p class="price">16$</p>
+                    </div>
+                    <div class="card pro">
+                        <img src="IMG/popular-2.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Калифорния</p>
+                            <hr>
+                            <p>Легкий и освежающий ролл с крабовым мясом, авокадо и огурцом, покрытый кунжутом для неповторимого вкуса.</p>
+                        </div>
+                        <p class="price">16$</p>
+                    </div>
+                    <div class="card pro">
+                        <img src="IMG/popular-2.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Калифорния</p>
+                            <hr>
+                            <p>Легкий и освежающий ролл с крабовым мясом, авокадо и огурцом, покрытый кунжутом для неповторимого вкуса.</p>
+                        </div>
+                        <p class="price">16$</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="sakeContent" style="display: none;">
+        <img src="IMG/promo-sets-2.png" alt="">
+                <div class="promo-sets-info">
+                    <div class="card pro">
+                        <img src="IMG/popular-2.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Калифорния</p>
+                            <hr>
+                            <p>Легкий и освежающий ролл с крабовым мясом, авокадо и огурцом, покрытый кунжутом для неповторимого вкуса.</p>
+                        </div>
+                        <p class="price">16$</p>
+                    </div>
+                    <div class="card pro">
+                        <img src="IMG/popular-2.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Калифорния</p>
+                            <hr>
+                            <p>Легкий и освежающий ролл с крабовым мясом, авокадо и огурцом, покрытый кунжутом для неповторимого вкуса.</p>
+                        </div>
+                        <p class="price">16$</p>
+                    </div>
+                    <div class="card pro">
+                        <img src="IMG/popular-2.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Калифорния</p>
+                            <hr>
+                            <p>Легкий и освежающий ролл с крабовым мясом, авокадо и огурцом, покрытый кунжутом для неповторимого вкуса.</p>
+                        </div>
+                        <p class="price">16$</p>
+                    </div>
+                    <div class="card pro">
+                        <img src="IMG/popular-2.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Калифорния</p>
+                            <hr>
+                            <p>Легкий и освежающий ролл с крабовым мясом, авокадо и огурцом, покрытый кунжутом для неповторимого вкуса.</p>
+                        </div>
+                        <p class="price">16$</p>
+                    </div>
+                </div>
+    </div>
+    <div id="rollsContent" style="display: none;">
+        <img src="IMG/promo-sets-3.png" alt="">
+                <div class="promo-sets-info">
+                    <div class="card pro">
+                        <img src="IMG/popular-2.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Калифорния</p>
+                            <hr>
+                            <p>Легкий и освежающий ролл с крабовым мясом, авокадо и огурцом, покрытый кунжутом для неповторимого вкуса.</p>
+                        </div>
+                        <p class="price">16$</p>
+                    </div>
+                    <div class="card pro">
+                        <img src="IMG/popular-2.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Калифорния</p>
+                            <hr>
+                            <p>Легкий и освежающий ролл с крабовым мясом, авокадо и огурцом, покрытый кунжутом для неповторимого вкуса.</p>
+                        </div>
+                        <p class="price">16$</p>
+                    </div>
+                    <div class="card pro">
+                        <img src="IMG/popular-2.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Калифорния</p>
+                            <hr>
+                            <p>Легкий и освежающий ролл с крабовым мясом, авокадо и огурцом, покрытый кунжутом для неповторимого вкуса.</p>
+                        </div>
+                        <p class="price">16$</p>
+                    </div>
+                    <div class="card pro">
+                        <img src="IMG/popular-2.png" alt="">
+                        <div class="pop-text">
+                            <p class="name">Калифорния</p>
+                            <hr>
+                            <p>Легкий и освежающий ролл с крабовым мясом, авокадо и огурцом, покрытый кунжутом для неповторимого вкуса.</p>
+                        </div>
+                        <p class="price">16$</p>
+                    </div>
+                </div>
+    </div>
+    <!-- Номер доставки -->
+    <footer class="footer">
+        <img src="IMG/master.png" alt="">
+        <img class="number-icon" src="IMG/mobile-2.png" alt="">
+        <p class="number">8-800-555-3535</p>
+        <img class="email-icon" src="IMG/email.png" alt="">
+        <p class="email-email">sgfsafgkajsfg@gmail.com</p>
+    </footer>
+    <script src="JS/main.js"></script>
+</body>
+</html>
