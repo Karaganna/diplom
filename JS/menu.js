@@ -60,3 +60,31 @@ window.addEventListener('DOMContentLoaded', handleScroll);
 
 let animated = false; // флаг, указывающий, была ли анимация уже запущена
 
+$(document).ready(function() {
+    // Обработчик клика для кнопок
+    $('.button').on('click', function() {
+        var itemId = $(this).data('id');
+
+        // Получаем текущие данные корзины из локального хранилища
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Проверяем, есть ли уже товар в корзине
+        var itemInCart = cart.find(item => item.id == itemId);
+
+        if (itemInCart) {
+            // Если товар уже в корзине, увеличиваем количество
+            itemInCart.quantity += 1;
+        } else {
+            // Если товара еще нет в корзине, добавляем его с количеством 1
+            cart.push({ id: itemId, quantity: 1 });
+        }
+
+        // Сохраняем обновленные данные корзины в локальном хранилище
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        // Перенаправление на страницу корзины
+        window.location.href = 'cart.html';
+    });
+});
+
+

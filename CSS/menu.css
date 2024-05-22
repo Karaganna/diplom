@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+body{
+    position: relative;
+}
+
 /* Header */
 
 .header{
@@ -94,7 +98,7 @@
 }
 
 #nav li {
-    margin: 12px 5%;
+    margin: 12px 4%;
 }
 #nav a:hover {
     color: rgb(255, 0, 0); /* Изменение цвета текста при наведении */

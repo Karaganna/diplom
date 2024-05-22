@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .cart-item button {
+            margin-left: 10px;
+        }
+        .cart-total {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Корзина</h2>
+<ul id="cart-items">
+    <!-- Товары будут добавлены сюда -->
+</ul>
+<button id="clear-cart">Очистить корзину</button>
+<div class="cart-total">
+    <strong>Итого:</strong> <span id="total-cost"></span> руб.
+</div>
+
+<script>
+    $(document).ready(function() {
+    // Получаем данные корзины из локального хранилища
+    var cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Цены товаров
+    var itemPrices = {
+        1: 100, // Стоимость товара с ID 1
+        2: 150, // Стоимость товара с ID 2
+        3: 2500 // Стоимость товара с ID 3
+        // Добавьте другие товары и их цены
+    };
+
+    // Функция для обновления отображения корзины и итоговой стоимости
+    function updateCartDisplay() {
+        $('#cart-items').empty();
+        var totalCost = 0;
+        cart.forEach(function(item) {
+            var itemCost = getItemCost(item.id); // Получаем стоимость товара по его ID
+            totalCost += item.quantity * itemCost;
+            $('#cart-items').append(
+                '<li class="cart-item">Товар ID: ' + item.id + ' - Количество: ' + item.quantity +
+                ' - Стоимость: ' + itemCost + ' руб.' +
+                '<button class="increase" data-id="' + item.id + '">+</button>' +
+                '<button class="decrease" data-id="' + item.id + '">-</button>' +
+                '<button class="remove" data-id="' + item.id + '">x</button></li>'
+            );
+        });
+        $('#total-cost').text(totalCost);
+    }
+
+    // Функция для получения стоимости товара по его ID
+    function getItemCost(itemId) {
+        return itemPrices[itemId] || 0; // Возвращает цену товара по его ID или 0, если цена не найдена
+    }
+
+    // Обработчик клика для увеличения количества
+    $(document).on('click', '.increase', function() {
+        var itemId = $(this).data('id');
+        var itemInCart = cart.find(item => item.id == itemId);
+        if (itemInCart) {
+            itemInCart.quantity += 1;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartDisplay();
+        }
+    });
+
+    // Обработчик клика для уменьшения количества
+    $(document).on('click', '.decrease', function() {
+        var itemId = $(this).data('id');
+        var itemInCart = cart.find(item => item.id == itemId);
+        if (itemInCart && itemInCart.quantity > 1) {
+            itemInCart.quantity -= 1;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartDisplay();
+        }
+    });
+
+    // Обработчик клика для удаления товара
+    $(document).on('click', '.remove', function() {
+        var itemId = $(this).data('id');
+        cart = cart.filter(item => item.id != itemId);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartDisplay();
+    });
+
+    // Обработчик клика для очистки корзины
+    $('#clear-cart').on('click', function() {
+        cart = [];
+        localStorage.removeItem('cart');
+        updateCartDisplay();
+    });
+
+    // Обновляем отображение корзины при загрузке страницы
+    updateCartDisplay();
+});
+
+</script>
+    <script src="JS/menu.js"></script>
+</body>
+</html>
